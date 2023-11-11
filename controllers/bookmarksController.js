@@ -1,6 +1,9 @@
 // DEPENDENCIES
 const express = require("express");
 const bookmarks = express.Router();
+const reviewsController = require('./reviewsController.js')
+bookmarks.use('/:bookmark_id/reviews', reviewsController)
+
 
 // Queries
 const {
